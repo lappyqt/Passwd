@@ -12,11 +12,12 @@ internal class PasswordGenerator : IPasswordGenerator
             throw new Exception("No characters available for password generation");
         }
 
-        char[] characters = new PasswordCharactersCreator()
+        char[] characters = new CharactersCreator()
             .AddLower(options.Lowercase)
             .AddUpper(options.Uppercase)
             .AddNumbers(options.Numbers)
             .AddSpecialSymbols(options.SpecialSymbols)
+            .Exclude(options.Exclude)
             .Create();
 
         var result = new StringBuilder();

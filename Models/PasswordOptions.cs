@@ -7,4 +7,5 @@ public class PasswordOptions
     public bool Uppercase { get; set; } = true;
     public bool Numbers { get; set; } = true;
     public bool SpecialSymbols { get; set; } = true;
+    public string Exclude { get; set; } = string.Empty;
 }
